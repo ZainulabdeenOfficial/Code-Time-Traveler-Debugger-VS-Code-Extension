@@ -1,0 +1,79 @@
+{
+  "name": "code-time-travel-debugger",
+  "displayName": "Code Time Traveler Debugger",
+  "description": "Scrub through your app's execution like a video. Time travel debugging for JS, Python, and C#.",
+  "version": "0.1.0",
+  "publisher": "mzainulabideen",
+  "icon": "logo.png",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MZainUlAbideen/code-time-travel-debugger.git"
+  },
+  "engines": {
+    "vscode": ">=1.75.0"
+  },
+  "categories": ["Debuggers", "Other"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codeTimeTravelDebugger.start",
+        "title": "Code Time Traveler: Start Debugging"
+      },
+      {
+        "command": "codeTimeTravelDebugger.stop",
+        "title": "Code Time Traveler: Stop Debugging"
+      },
+      {
+        "command": "codeTimeTravelDebugger.openTimeline",
+        "title": "Code Time Traveler: Open Timeline UI"
+      },
+      {
+        "command": "codeTimeTravelDebugger.openTimelineWebview",
+        "title": "Code Time Traveler: Open Timeline in Editor"
+      },
+      {
+        "command": "codeTimeTravelDebugger.injectAdapter",
+        "title": "Code Time Traveler: Inject Adapter"
+      },
+      {
+        "command": "codeTimeTravelDebugger.showCodeLensGuide",
+        "title": "Code Time Traveler: Show Code Lens/Variable Hover Guide"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Code Time Traveler Debugger",
+      "properties": {
+        "codeTimeTravelDebugger.pythonPath": {
+          "type": "string",
+          "default": "python",
+          "description": "Path to the Python interpreter to use for the backend."
+        },
+        "codeTimeTravelDebugger.backendPort": {
+          "type": "number",
+          "default": 5000,
+          "description": "Port for the backend Flask server."
+        },
+        "codeTimeTravelDebugger.frontendPort": {
+          "type": "number",
+          "default": 3000,
+          "description": "Port for the React frontend server."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.70.0",
+    "typescript": "^4.7.0",
+    "tslint": "^6.1.0",
+    "@types/node": "^16.0.0"
+  },
+  "dependencies": {}
+}
