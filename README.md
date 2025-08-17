@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="https://github.com/ZainulabdeenOfficial/Code-Time-Traveler-Debugger-VS-Code-Extension/blob/main/Code%20time%20traveler%20debugger/vscode-extension/logo.png?raw=true" alt="Code Time Traveler Debugger Logo" width="600"/>
+</p>
 
 # Code Time Traveler Debugger
 
